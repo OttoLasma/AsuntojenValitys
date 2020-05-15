@@ -4,15 +4,15 @@
   <table>
     <tr>
       <th>Task</th>
-      <th>Done</th>
+      
       <th></th>
     </tr>
     {% for transaction in transactions %}
     <tr>
       <td>{{ transaction.name }}</td>
-      <td>{{ transaction.done }}</td>
+      <!-- <td>{{ transaction.done }}</td> -->
       <td>
-	<form method="POST" action="{{ url_for('transactions_set_done', transaction_id=transaction.id) }}">
+	<form method="POST" action="{{ url_for(transaction_id=transaction.id) }}">
 	  <input type="submit" value="Change status!"/>
 	</form>
       </td>

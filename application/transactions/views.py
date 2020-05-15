@@ -20,7 +20,7 @@ def transactions_form():
 def transactions_set_done(transaction_id):
 
     t = Transaction.query.get(transaction_id)
-    t.done = True
+    # t.done = True
     db.session().commit()
   
     return redirect(url_for("transactions_index"))
@@ -32,7 +32,7 @@ def transactions_create():
     if not form.validate():
         return render_template("transactions/new.html", form = form)
     t = Transaction(form.name.data)
-    t.done = form.done.data
+    # t.done = form.done.data
     t.account_id = current_user.id
 
     db.session().add(t)
