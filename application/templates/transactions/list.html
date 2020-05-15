@@ -12,7 +12,7 @@
       <td>{{ transaction.name }}</td>
       <td>{{ transaction.done }}</td>
       <td>
-	<form method="POST" action="{{ url_for('tasks_set_done', transaction_id=transaction.id) }}">
+	<form method="POST" action="{{ url_for('transactions_set_done', transaction_id=transaction.id) }}">
 	  <input type="submit" value="Change status!"/>
 	</form>
       </td>
