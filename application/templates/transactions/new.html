@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+<form method="POST" action="{{ url_for('transactions_create') }}">
+  <input type="text" name="name"/>
+  <input type="submit" value="Add a new transaction"/>
+</form>
+{% endblock %}
