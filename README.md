@@ -13,3 +13,5 @@ Tarkoituksena on laatia alusta, jossa käyttäjät voivat tarkastella omien virt
 [Linkki tietokantakaavioon](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/Screenshot%20from%202020-05-13%2020-04-25.png)
 
 [Linkki herokuun](https://tsoha-cryptoportfolio.herokuapp.com/)
+
+[Linkki user storyihin](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/documentation/userstory.md)
