@@ -1,25 +1,27 @@
 from application import db
 from application.models import Base
 
-class User(db.Model):
+from sqlalchemy.sql import text
+
+
+class User(Base):
 
     __tablename__ = "account"
-  
 
     name = db.Column(db.String(144), nullable=False)
     username = db.Column(db.String(144), nullable=False)
     password = db.Column(db.String(144), nullable=False)
-    
-    transactions = db.relationship("Transaction", backref='account', lazy=True)
 
+    transactions = db.relationship("Transaction", backref='account', lazy=True)
+  
     def __init__(self, name, username, password):
         self.name = name
         self.username = username
         self.password = password
-  
+
     def get_id(self):
         return self.id
-
+  
     def is_active(self):
         return True
 
