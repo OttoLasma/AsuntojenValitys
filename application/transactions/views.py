@@ -28,7 +28,7 @@ def transactionsedit_form(transaction_id):
 def transactions_create():
     form = TransactionForm(request.form)
     if not form.validate():
-        return render_template("transactions/edit.html", form=form)
+        return render_template("transactions/new.html", form=form)
     t = Transaction(form.currency.data, form.amount.data)
     t.account_id = current_user.id
     db.session().add(t)

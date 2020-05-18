@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<a>Currencies that are currently allowed: BTC and ETH</a>
 <form method="POST" action="{{ url_for('edit_transaction', transaction_id = transaction.id) }}">
   <table>
     <tr>
