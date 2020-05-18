@@ -33,7 +33,7 @@ def transactions_create():
     t.account_id = current_user.id
     db.session().add(t)
     db.session().commit()
-    return redirect(url_for("index"))
+    return render_template("transactions/list.html", transactions=Transaction.query.filter_by(account_id = current_user.id))
 
 def save_edit(transaction, form, new = False):
     transaction.currency = form.currency.data
