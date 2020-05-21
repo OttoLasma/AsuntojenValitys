@@ -47,6 +47,8 @@ def edit_transaction(transaction_id):
     
     transaction = Transaction.query.get(transaction_id)
     form = TransactionEditForm(request.form, obj= transaction)
+    if not form.validate():
+        return render_template("transactions/edit.html", form=TransactionEditForm(), transaction = transaction)
     if request.method == "POST":
         save_edit(transaction, form)
         return render_template("transactions/list.html", transactions=Transaction.query.filter_by(account_id = current_user.id))
