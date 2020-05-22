@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import BooleanField, StringField, validators, IntegerField, ValidationError
 
 def valid_currency(form, field):
-    list = ["ETH", "BTC"]
+    list = ["ETH", "BTC", "LINK" , "XRP"]
     if field.data not in list:
         raise ValidationError('This particular currency has not been identified by the platform')
     
