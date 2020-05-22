@@ -25,7 +25,7 @@ def portfolio_index():
     eth = get_ETH_spotprice()
     link = get_LINK_spotprice()
     xrp = get_XRP_spotprice()
-    return render_template("portfolio/view.html", portfolio=Portfolio.query.filter_by(account_id = current_user.id).first(), btc = btc, eth = eth, transactions = transactions)
+    return render_template("portfolio/view.html", portfolio=Portfolio.query.filter_by(account_id = current_user.id).first(), btc = btc, eth = eth, link = link, xrp = xrp, transactions = transactions)
 
 def calculate_value(p, transactions):
     BTC = 0
