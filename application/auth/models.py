@@ -13,7 +13,7 @@ class User(Base):
     password = db.Column(db.String(144), nullable=False)
 
     transactions = db.relationship("Transaction", backref='account', lazy=True)
-  
+    portfolio = db.relationship("Portfolio", backref='account', lazy=True)
     def __init__(self, name, username, password):
         self.name = name
         self.username = username

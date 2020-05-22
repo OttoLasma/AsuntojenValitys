@@ -19,6 +19,8 @@ from application import views
 from application.transactions import models
 from application.transactions import views
 
+from application.portfolio import models
+from application.portfolio import views
 
 from application.auth import models
 from application.auth import views

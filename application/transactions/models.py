@@ -1,7 +1,8 @@
 from application import app, db
 from application.models import Base
-
+from flask_login import current_user
 from sqlalchemy.sql import text
+import json
 
 
 class Transaction(Base):
@@ -12,4 +13,7 @@ class Transaction(Base):
     def __init__(self, currency, amount):
         self.currency = currency
         self.amount = amount
-    
+
+    @staticmethod  
+    def get_transactions():
+        return Transaction.query.filter_by(account_id = current_user.id)
