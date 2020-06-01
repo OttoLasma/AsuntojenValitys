@@ -30,3 +30,12 @@ class User(Base):
 
     def is_authenticated(self):
         return True
+
+    @staticmethod
+    def find_user_with_largest_BTC_transaction():
+        stmt = text("SELECT Account.id, Account.name FROM Account"
+                    " LEFT JOIN Portfolio ON Portfolio.account_id = Account.id"
+                    " GROUP BY Account.id"
+                    " HAVING COUNT(Portfolio.btc_amount) > 127")
+        res = db.engine.execute(stmt)
+        return res

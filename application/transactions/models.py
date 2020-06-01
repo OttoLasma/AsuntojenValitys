@@ -17,3 +17,5 @@ class Transaction(Base):
     @staticmethod  
     def get_transactions():
         return Transaction.query.filter_by(account_id = current_user.id)
+
+    
