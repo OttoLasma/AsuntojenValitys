@@ -4,11 +4,10 @@ Tarkoituksena on laatia alusta, jossa käyttäjät voivat tarkastella omien virt
 
 <h1> Halutut toiminnot </h1>
 
-- Kijautuminen
-- Käyttäjän luominen
-- Kommentointi virtuaalivaluuttojen alle
-- Oman portfolion päivittäminen
-- Portfolion kehityksen seuraaminen
+- Kijautuminen (valmis)
+- Käyttäjän luominen (valmis)
+- Oman portfolion päivittäminen (valmis)
+- Portfolion kehityksen seuraaminen (osittain valmis)
 
 [Linkki tietokantakaavioon](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/documentation/Screenshot%20from%202020-05-13%2020-04-25.png)
 
