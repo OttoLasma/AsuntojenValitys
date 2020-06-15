@@ -14,3 +14,22 @@ Tarkoituksena on laatia alusta, jossa käyttäjät voivat tarkastella omien virt
 [Linkki herokuun](https://tsoha-cryptoportfolio.herokuapp.com/)
 
 [Linkki user storyihin](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/documentation/userstory.md)
+
+<h1> Asennusohje </h1>
+
+Sovelluksen suorittamiseen lokaalista koneellasi täytyy olla ladattuna ainakin seuraavat:
+
+- `python3`
+- `venv`
+- `pip`
+- `sqlite`
+
+Lataa sovellun koneellesi tai aja suorita komento `git clone https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio`. Tämän jälkeen suorita seuraavat komennot:
+
+- `python3 -m venv venv`
+- `source venve/bin/activate`
+- `pip install requirements.txt`
+- `python run.py`
+
+Nyt sovellus on tarkasteltavissa osoitteessa http://localhost:5000. 
+
