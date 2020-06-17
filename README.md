@@ -9,6 +9,8 @@ Tarkoituksena on laatia alusta, jossa käyttäjät voivat tarkastella omien virt
 - Oman portfolion päivittäminen (valmis)
 - Portfolion kehityksen seuraaminen (osittain valmis)
 
+# Linkin muuhun dokumentaatioon:
+
 [Linkki tietokantakaavioon](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/documentation/Screenshot%20from%202020-05-13%2020-04-25.png)
 
 [Linkki herokuun](https://tsoha-cryptoportfolio.herokuapp.com/)
@@ -17,14 +19,14 @@ Tarkoituksena on laatia alusta, jossa käyttäjät voivat tarkastella omien virt
 
 <h1> Asennusohje </h1>
 
-Sovelluksen suorittamiseen lokaalista koneellasi täytyy olla ladattuna ainakin seuraavat:
+Sovelluksen suorittamiseen lokaalista koneelaesi täytyy olla ladattuna ainakin seuraavat:
 
 - `python3`
 - `venv`
 - `pip`
 - `sqlite`
 
-Lataa sovellun koneellesi tai aja suorita komento `git clone https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio`. Tämän jälkeen suorita seuraavat komennot:
+Lataa sovellus koneellesi tai suorita komento `git clone https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio`. Tämän jälkeen suorita vielä seuraavat komennot:
 
 - `python3 -m venv venv`
 - `source venve/bin/activate`
