@@ -15,6 +15,8 @@ Tarkoituksena on laatia alusta, jossa käyttäjät voivat tarkastella omien virt
 
 [Linkki herokuun](https://tsoha-cryptoportfolio.herokuapp.com/)
 
+[CREATE TABLE -lauseet](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/documentation/CreateTableLauseet.md)
+
 [Linkki user storyihin](https://github.com/OttoLasma/VirtuaalivaluuttaPortfolio/blob/master/documentation/userstory.md)
 
 <h1> Asennusohje </h1>
