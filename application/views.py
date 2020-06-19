@@ -1,8 +1,9 @@
 from flask import render_template
-from application import app
+from application import app, db
 from application.auth.models import User
+from flask_login import login_required, current_user
+from sqlalchemy.sql import text
 
 @app.route("/")
 def index():
-    list = User.find_user_with_largest_BTC_transaction()
-    return render_template("index.html", list = list)
+    return render_template("index.html")

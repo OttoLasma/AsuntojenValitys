@@ -29,7 +29,7 @@ def transactions_create():
     form = TransactionForm(request.form)
     if not form.validate():
         return render_template("transactions/new.html", form=form)
-    t = Transaction(form.currency.data, form.amount.data)
+    t = Transaction(form.currency.data, form.amount.data, form.rate.data)
     t.account_id = current_user.id
     db.session().add(t)
     db.session().commit()
@@ -38,6 +38,7 @@ def transactions_create():
 def save_edit(transaction, form, new = False):
     transaction.currency = form.currency.data
     transaction.amount = form.amount.data
+    transaction.rate = form.rate.data
     db.session().commit()
     return render_template("transactions/list.html", transactions=Transaction.query.filter_by(account_id = current_user.id))
 

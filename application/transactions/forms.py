@@ -9,11 +9,13 @@ def valid_currency(form, field):
 class TransactionForm(FlaskForm):
     currency = StringField('Currency', [validators.Length(min=3, max=5, message="Please use the abbreviation of the currency in question"), valid_currency, validators.InputRequired(message='Field is required')])
     amount = IntegerField("Amount", [validators.NumberRange(min=None, max=None, message="Value must be an integer"), validators.InputRequired(message='Field is required')])
+    rate = IntegerField("Rate", [validators.NumberRange(min=None, max=None, message="Value must be an integer"), validators.InputRequired(message='Field is required')])
     class Meta:
         csrf = False
         
 class TransactionEditForm(FlaskForm):
     currency = StringField('Currency', [validators.Length(min=3, max=5, message="Please use the abbreviation of the currency in question"), valid_currency, validators.InputRequired(message='Field is required')])
     amount = IntegerField("Amount", [validators.NumberRange(min=None, max=None, message="Value must be an integer"), validators.InputRequired(message='Field is required')])
+    rate = IntegerField("Rate", [validators.NumberRange(min=None, max=None, message="Value must be an integer"), validators.InputRequired(message='Field is required')])
     class Meta:
         csrf = False

@@ -8,11 +8,13 @@ import json
 class Transaction(Base):
     currency = db.Column(db.String(144), nullable=False)
     amount = db.Column(db.Integer, nullable=False)
+    rate = db.Column(db.Integer, nullable=False)
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
 
-    def __init__(self, currency, amount):
+    def __init__(self, currency, amount, rate):
         self.currency = currency
         self.amount = amount
+        self.rate = rate
 
     @staticmethod  
     def get_transactions():
